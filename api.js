@@ -65,13 +65,13 @@ const ProductsAPI = {
                     size: productData.size,
                     area: productData.area,
                     orientation: productData.orientation,
-                    viewing_direction: productData.viewingDirection,
+                    viewing_direction: productData.viewing_direction,
                     traffic: productData.traffic,
                     description: productData.description,
-                    maps_url: productData.mapsUrl,
-                    drive_url: productData.driveUrl,
-                    video_url: productData.videoUrl,
-                    availability_date: productData.availabilityDate || null
+                    maps_url: productData.maps_url,
+                    drive_url: productData.drive_url,
+                    video_url: productData.video_url,
+                    availability_date: productData.availability_date || null
                 })
             });
             
