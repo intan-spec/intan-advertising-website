@@ -84,8 +84,7 @@ Frontend akan berjalan di http://localhost:8000
 - `POST /api/admin/logout` - Logout admin
 
 ### Autentikasi
-- Username: `admin`
-- Password: `admin123`
+
 - Session menggunakan JWT token
 - Token disimpan di localStorage untuk persistence
 
