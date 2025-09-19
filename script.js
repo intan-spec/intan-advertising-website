@@ -190,14 +190,14 @@ function convertDatabaseProduct(product) {
         size: product.size,
         area: product.area,
         orientation: product.orientation,
-        viewingDirection: product.viewingDirection,
+        viewingDirection: product.viewing_direction,
         traffic: product.traffic,
         description: product.description,
-        mapsUrl: product.mapsUrl,
-        driveUrl: product.driveUrl,
-        videoUrl: product.videoUrl,
-        availabilityDate: product.availabilityDate,
-        lastUpdated: product.lastUpdated
+        mapsUrl: product.maps_url,
+        driveUrl: product.drive_url,
+        videoUrl: product.video_url,
+        availabilityDate: product.availability_date,
+        lastUpdated: product.last_updated
     };
 }
 
@@ -488,10 +488,31 @@ function openProductDetail(productId) {
     document.getElementById('productTraffic').textContent = product.traffic;
     document.getElementById('productDescription').textContent = product.description;
     
-    // Set links
-    document.getElementById('googleMapsLink').href = product.mapsUrl || '#';
-    document.getElementById('googleDriveLink').href = product.driveUrl || '#';
-    document.getElementById('videoPreviewLink').href = product.videoUrl || '#';
+    // Set links - hide buttons if URL is empty or null
+    const mapsLink = document.getElementById('googleMapsLink');
+    const driveLink = document.getElementById('googleDriveLink');
+    const videoLink = document.getElementById('videoPreviewLink');
+    
+    if (product.mapsUrl && product.mapsUrl !== '#' && product.mapsUrl.trim() !== '') {
+        mapsLink.href = product.mapsUrl;
+        mapsLink.style.display = 'inline-block';
+    } else {
+        mapsLink.style.display = 'none';
+    }
+    
+    if (product.driveUrl && product.driveUrl !== '#' && product.driveUrl.trim() !== '') {
+        driveLink.href = product.driveUrl;
+        driveLink.style.display = 'inline-block';
+    } else {
+        driveLink.style.display = 'none';
+    }
+    
+    if (product.videoUrl && product.videoUrl !== '#' && product.videoUrl.trim() !== '') {
+        videoLink.href = product.videoUrl;
+        videoLink.style.display = 'inline-block';
+    } else {
+        videoLink.style.display = 'none';
+    }
     
     // Show popup
     document.getElementById('productDetailPopup').classList.add('show');

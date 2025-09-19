@@ -38,22 +38,7 @@ const ProductsAPI = {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    location: productData.location,
-                    image: productData.image,
-                    category: productData.category,
-                    status: productData.status,
-                    size: productData.size,
-                    area: productData.area,
-                    orientation: productData.orientation,
-                    viewing_direction: productData.viewingDirection,
-                    traffic: productData.traffic,
-                    description: productData.description,
-                    maps_url: productData.mapsUrl,
-                    drive_url: productData.driveUrl,
-                    video_url: productData.videoUrl,
-                    availability_date: productData.availabilityDate || null
-                })
+                body: JSON.stringify(productData)
             });
             
             if (!response.ok) throw new Error('Failed to create product');
