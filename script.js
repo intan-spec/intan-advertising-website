@@ -689,13 +689,13 @@ async function handleProductSubmit(e) {
         description: document.getElementById('productDescriptionForm').value,
         size: document.getElementById('productSizeForm').value,
         orientation: document.getElementById('productOrientationForm').value,
-        viewingDirection: document.getElementById('productViewingDirectionForm').value,
+        viewing_direction: document.getElementById('productViewingDirectionForm').value,
         traffic: document.getElementById('productTrafficForm').value,
         area: document.getElementById('productAreaForm').value,
-        availabilityDate: document.getElementById('productAvailabilityDate').value,
-        mapsUrl: document.getElementById('productMapsUrl').value,
-        driveUrl: document.getElementById('productDriveUrl').value,
-        videoUrl: document.getElementById('productVideoUrl').value,
+        availability_date: document.getElementById('productAvailabilityDate').value || null,
+        maps_url: document.getElementById('productMapsUrl').value || null,
+        drive_url: document.getElementById('productDriveUrl').value || null,
+        video_url: document.getElementById('productVideoUrl').value || null,
         image: imageUrl && imageUrl.trim() !== '' ? imageUrl : 'https://via.placeholder.com/400x200/1e3a8a/ffffff?text=New+Product'
     };
     
