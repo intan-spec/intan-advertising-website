@@ -496,21 +496,27 @@ function openProductDetail(productId) {
     if (product.mapsUrl && product.mapsUrl !== '#' && product.mapsUrl.trim() !== '') {
         mapsLink.href = product.mapsUrl;
         mapsLink.style.display = 'inline-block';
+        mapsLink.removeAttribute('disabled');
     } else {
+        mapsLink.href = '#';
         mapsLink.style.display = 'none';
     }
     
     if (product.driveUrl && product.driveUrl !== '#' && product.driveUrl.trim() !== '') {
         driveLink.href = product.driveUrl;
         driveLink.style.display = 'inline-block';
+        driveLink.removeAttribute('disabled');
     } else {
+        driveLink.href = '#';
         driveLink.style.display = 'none';
     }
     
     if (product.videoUrl && product.videoUrl !== '#' && product.videoUrl.trim() !== '') {
         videoLink.href = product.videoUrl;
         videoLink.style.display = 'inline-block';
+        videoLink.removeAttribute('disabled');
     } else {
+        videoLink.href = '#';
         videoLink.style.display = 'none';
     }
     
