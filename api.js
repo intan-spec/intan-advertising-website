@@ -2,7 +2,7 @@
 // Use environment-specific API URL
 const API_BASE_URL = window.location.hostname === 'localhost' 
     ? 'http://localhost:3000'  // Local development
-    : 'https://your-backend-url.railway.app';  // Production backend URL
+    : 'https://intan-advertising-website.onrender.com';  // Production backend URL
 
 // Products API
 const ProductsAPI = {

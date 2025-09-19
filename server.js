@@ -8,9 +8,13 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors({
-    origin: process.env.NODE_ENV === 'production' 
-        ? ['https://your-netlify-site.netlify.app'] // Update dengan URL Netlify Anda
-        : ['http://localhost:8000', 'http://localhost:3000'],
+    origin: [
+        'http://localhost:8000',
+        'https://localhost:8000',
+        'http://127.0.0.1:8000',
+        'https://your-netlify-site.netlify.app',  // Replace with your Netlify URL
+        'https://intan-advertising-website.onrender.com'  // Render frontend URL
+    ],
     credentials: true
 }));
 app.use(express.json());
