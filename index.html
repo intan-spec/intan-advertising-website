@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intan Advertising - Premium Advertising Media in Bekasi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="logo.svg" alt="Intan Advertising Logo" class="logo-image">
+                    <h2>Intan Advertising</h2>
+                </div>
+                <div class="nav-container">
+                    <nav class="nav">
+                        <a href="#home" class="nav-link">Home</a>
+                        <a href="#products" class="nav-link">Products</a>
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </nav>
+                    <div class="header-actions">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="gradient-shape shape-1"></div>
+            <div class="gradient-shape shape-2"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Smart & Strategic</span> Advertising Media Solutions
+                </h1>
+                <p class="hero-subtitle">
+                    We provide Videotron, Billboard, and Signage rental at strategic points to maximize your brand visibility.
+                </p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn-primary">See Our Products</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Advertising Media</h2>
+                <p>Strategic locations across Bekasi for maximum brand exposure</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search by location...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="filter-dropdowns">
+                    <select id="statusFilter">
+                        <option value="">All Status</option>
+                        <option value="Available">Available</option>
+                        <option value="Booked">Booked</option>
+                        <option value="Sold">Sold</option>
+                    </select>
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="Videotron">Videotron</option>
+                        <option value="Billboard">Billboard</option>
+                        <option value="Signage">Signage</option>
+                    </select>
+                    <select id="areaFilter">
+                        <option value="">All Areas</option>
+                        <option value="Bekasi Timur">Bekasi Timur</option>
+                        <option value="Bekasi Barat">Bekasi Barat</option>
+                        <option value="Bekasi Selatan">Bekasi Selatan</option>
+                        <option value="Bekasi Utara">Bekasi Utara</option>
+                    </select>
+                    <select id="sizeSort">
+                        <option value="">Sort by Size</option>
+                        <option value="asc">Size: Small to Large</option>
+                        <option value="desc">Size: Large to Small</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Admin Controls (Hidden by default) -->
+            <div class="admin-controls" id="adminControls" style="display: none;">
+                <button class="btn btn-primary" onclick="openAddProductForm()">
+                    <i class="fas fa-plus"></i> Add Product
+                </button>
+                <button class="btn btn-secondary" onclick="openAllProductsTable()">
+                    <i class="fas fa-table"></i> View All Products
+                </button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be loaded here -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be generated here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Get in Touch</h2>
+                <p>Ready to boost your brand visibility? Contact us today!</p>
+                <div class="contact-methods">
+                    <a href="https://wa.me/6281234567890" class="contact-method">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:info@intanadvertising.com" class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="tel:+6281234567890" class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <span>Phone</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-divider"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>PT. Divaintan Putripratama</h3>
+                    <p>Premium advertising media solutions in Bekasi</p>
+                    <button class="admin-login-btn footer-admin-btn" onclick="openAdminLogin()">
+                        <i class="fas fa-user-shield"></i>
+                    </button>
+                </div>
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Jl. Bukit Barisan No.84 - 85 Blok A, Jakasampurna, Bekasi Barat, Bekasi, West Java 17145</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@intanadvertising.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+62 812-3456-7890</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+62 812-3456-7890</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Popup -->
+    <div class="popup-overlay" id="productDetailPopup">
+        <div class="popup-content product-detail-popup">
+            <button class="popup-close" onclick="closeProductDetail()">&times;</button>
+            <div class="product-detail-content">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="mainProductImage" src="" alt="">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 id="productDetailTitle"></h3>
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Category:</span>
+                            <span id="productCategory"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Size:</span>
+                            <span id="productSize"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Status:</span>
+                            <span id="productStatus" class="status-badge"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Area:</span>
+                            <span id="productArea"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Orientation:</span>
+                            <span id="productOrientation"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Viewing Direction:</span>
+                            <span id="productViewingDirection"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Traffic:</span>
+                            <span id="productTraffic"></span>
+                        </div>
+                    </div>
+                    <div class="product-description">
+                        <p id="productDescription"></p>
+                    </div>
+                    <div class="product-links">
+                        <a id="googleMapsLink" href="#" target="_blank" class="btn btn-secondary">
+                            <i class="fas fa-map-marker-alt"></i> View on Maps
+                        </a>
+                        <a id="googleDriveLink" href="#" target="_blank" class="btn btn-secondary">
+                            <i class="fas fa-download"></i> Download Files
+                        </a>
+                        <a id="videoPreviewLink" href="#" target="_blank" class="btn btn-secondary">
+                            <i class="fas fa-play"></i> Video Preview
+                        </a>
+                    </div>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/6281234567890" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="mailto:info@intanadvertising.com" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Login Popup -->
+    <div class="popup-overlay" id="adminLoginPopup">
+        <div class="popup-content admin-login-popup">
+            <button class="popup-close" onclick="closeAdminLogin()">&times;</button>
+            <h3>Admin Login</h3>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="adminUsername">Username:</label>
+                    <input type="text" id="adminUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Password:</label>
+                    <input type="password" id="adminPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add/Edit Product Popup -->
+    <div class="popup-overlay" id="productFormPopup">
+        <div class="popup-content product-form-popup">
+            <button class="popup-close" onclick="closeProductForm()">&times;</button>
+            <h3 id="productFormTitle">Add Product</h3>
+            <form id="productForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productLocation">Location Name:</label>
+                        <input type="text" id="productLocation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productImageFile">Upload Image:</label>
+                        <input type="file" id="productImageFile" accept=".jpg,.jpeg,.png" onchange="handleImageUpload(event)">
+                        <small class="form-help">Supported formats: JPG, JPEG, PNG (Max 5MB)</small>
+                        <div id="imagePreview" class="image-preview" style="display: none;">
+                            <img id="previewImg" src="" alt="Preview">
+                            <button type="button" class="remove-image" onclick="removeImagePreview()">&times;</button>
+                        </div>
+                        <input type="hidden" id="productImage" name="productImage">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productCategoryForm">Category:</label>
+                        <select id="productCategoryForm" required>
+                            <option value="">Select Category</option>
+                            <option value="Videotron">Videotron</option>
+                            <option value="Billboard">Billboard</option>
+                            <option value="Signage">Signage</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="productStatusForm">Status:</label>
+                        <select id="productStatusForm" required>
+                            <option value="Available">Available</option>
+                            <option value="Booked">Booked</option>
+                            <option value="Sold">Sold</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="productDescriptionForm">Description:</label>
+                    <textarea id="productDescriptionForm" rows="3"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productSizeForm">Size:</label>
+                        <input type="text" id="productSizeForm" placeholder="e.g., 6m x 12m">
+                    </div>
+                    <div class="form-group">
+                        <label for="productOrientationForm">Orientation:</label>
+                        <select id="productOrientationForm">
+                            <option value="Landscape">Landscape</option>
+                            <option value="Portrait">Portrait</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productViewingDirectionForm">Viewing Direction:</label>
+                        <input type="text" id="productViewingDirectionForm" placeholder="e.g., North-South">
+                    </div>
+                    <div class="form-group">
+                        <label for="productTrafficForm">Traffic:</label>
+                        <input type="text" id="productTrafficForm" placeholder="e.g., High, Medium, Low">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productAreaForm">Area/Region:</label>
+                        <input type="text" id="productAreaForm" placeholder="Masukkan area/region">
+                    </div>
+                    <div class="form-group">
+                        <label for="productAvailabilityDate">Next Availability Date:</label>
+                        <input type="date" id="productAvailabilityDate">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productMapsUrl">Google Maps URL:</label>
+                        <input type="url" id="productMapsUrl">
+                    </div>
+                    <div class="form-group">
+                        <label for="productDriveUrl">Google Drive URL:</label>
+                        <input type="url" id="productDriveUrl">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="productVideoUrl">Video Preview URL:</label>
+                    <input type="url" id="productVideoUrl">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeProductForm()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- All Products Table Popup -->
+    <div class="popup-overlay" id="allProductsPopup">
+        <div class="popup-content all-products-popup">
+            <button class="popup-close" onclick="closeAllProductsTable()">&times;</button>
+            <h3>All Products</h3>
+            <div class="table-filters">
+                <input type="text" id="tableSearchInput" placeholder="Search by location...">
+                <select id="tableStatusFilter">
+                    <option value="">All Status</option>
+                    <option value="Available">Available</option>
+                    <option value="Booked">Booked</option>
+                    <option value="Sold">Sold</option>
+                </select>
+                <select id="tableCategoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="Videotron">Videotron</option>
+                    <option value="Billboard">Billboard</option>
+                    <option value="Signage">Signage</option>
+                </select>
+                <select id="tableAreaFilter">
+                    <option value="">All Areas</option>
+                    <option value="Bekasi Timur">Bekasi Timur</option>
+                    <option value="Bekasi Barat">Bekasi Barat</option>
+                    <option value="Bekasi Selatan">Bekasi Selatan</option>
+                    <option value="Bekasi Utara">Bekasi Utara</option>
+                </select>
+            </div>
+            <div class="table-container">
+                <table id="allProductsTable">
+                    <thead>
+                        <tr>
+                            <th>Thumbnail</th>
+                            <th onclick="sortTable('location')">Location <i class="fas fa-sort"></i></th>
+                            <th onclick="sortTable('category')">Category <i class="fas fa-sort"></i></th>
+                            <th onclick="sortTable('size')">Size <i class="fas fa-sort"></i></th>
+                            <th onclick="sortTable('status')">Status <i class="fas fa-sort"></i></th>
+                            <th onclick="sortTable('area')">Area <i class="fas fa-sort"></i></th>
+                            <th>Maps</th>
+                            <th onclick="sortTable('lastUpdated')">Last Updated <i class="fas fa-sort"></i></th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="allProductsTableBody">
+                        <!-- Table rows will be generated here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-pagination" id="tablePagination">
+                <!-- Table pagination will be generated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="api.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
